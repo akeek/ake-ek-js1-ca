@@ -1,0 +1,12 @@
+.resultsContainer {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 600px;
+    border: 1px solid black;
+  }
+
+  .details-image {
+    margin-bottom: 1.5em;
+    height: 300px;
+    background-repeat: no-repeat;
+}
