@@ -22,7 +22,7 @@ async function makeApiCall() {
 
 
             htmlContainer.innerHTML += `<div class="resultsContainer">
-                                        <h2><a href="details.html">${results[i].name}</a></h2> 
+                                        <h2><a href="details.html?id=${results[i].id}">${results[i].name}</a></h2> 
                                         <h3>Product type: ${results[i].product_type}</h3> 
                                         <h3>Price: $${results[i].price}</h3> 
                                         <div class="details-image" 
@@ -34,6 +34,7 @@ async function makeApiCall() {
 
 
     } catch (error) {
+        htmlContainer.innerHTML = "Uh oh... This is not good. Something went wrong!"
         console.log(error);
     }
 }
