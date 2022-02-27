@@ -1,0 +1,39 @@
+form {
+  padding: 2em;
+  background: white;
+  border-radius: 1rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: green;
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-error {
+  display: none;
+  color: purple;
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.success {
+  display: none;
+}
