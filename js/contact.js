@@ -7,9 +7,8 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const adress = document.querySelector("#adress");
 const adressError = document.querySelector("#adressError");
-const success = document.querySelector(".success");
 
-function validateForm(event) {
+function checkForm(event) {
     event.preventDefault();
 
     if (checkLength(fullName.value, 0) === true) {
@@ -24,7 +23,7 @@ function validateForm(event) {
         subjectError.style.display = "block";
     }
 
-    if (validateEmail(email.value) === true) {
+    if (checkEmail(email.value) === true) {
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
@@ -38,7 +37,7 @@ function validateForm(event) {
 
 }
 
-form.addEventListener("submit", validateForm);
+form.addEventListener("submit", checkForm);
 
 function checkLength(value, len) {
     if (value.trim().length > len) {
@@ -48,7 +47,7 @@ function checkLength(value, len) {
     }
 }
 
-function validateEmail(email) {
+function checkEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;
